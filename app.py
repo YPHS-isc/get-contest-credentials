@@ -30,7 +30,7 @@ def index():
 @app.route('/flask/login',methods=["GET","POST"])
 def login():
 	if(request.method=='GET'):
-		if(session.get('username')!=None):
+		if(session.get('sid')!=None):
 			return redirect(url_for('index'))
 		return render_template('login.html')
 	elif(request.method=='POST'):
